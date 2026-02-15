@@ -6,7 +6,7 @@
     
     shellAliases = {
       ll = "ls -l";
-      update = "sudo nixos-rebuild switch --flake .#notebook";
+      update = "sudo nixos-rebuild switch --flake ~/nixos-config#notebook";
     };
 
     initExtra = ''
