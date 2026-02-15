@@ -1,0 +1,7 @@
+cat <<EOF > .gitignore
+result
+result-*
+.direnv/
+.envrc
+flake.lock.backup
+EOF
