@@ -19,6 +19,9 @@
     # búsqueda
     ripgrep
     fd
+
+    #devenv
+    devenv
   ];
 }
 

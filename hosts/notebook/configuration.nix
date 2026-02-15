@@ -68,6 +68,7 @@
     description = "Dante Suarez";
     extraGroups = [ "networkmanager" "wheel" ];
   };
+  nix.settings.trusted-users = ["root" "dante"];
 
   # --- HOME MANAGER ---
   home-manager.useGlobalPkgs = true;
