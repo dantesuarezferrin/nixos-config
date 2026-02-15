@@ -6,5 +6,6 @@
     ./tmux.nix
     ./wezterm.nix
     ./bash.nix
+    ./hledger.nix
   ];
 }
