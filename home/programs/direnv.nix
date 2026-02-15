@@ -13,7 +13,7 @@
         watch_file devenv.yaml
         watch_file devenv.local.nix
         
-        eval "$(devenv shell --print-bash-setup)"
+        eval "$(devenv print-dev-env)"
       }
     '';
   };
