@@ -9,6 +9,9 @@
       gcc
       gnumake
     ];
+    plugins = with pkgs.vimPlugins; [
+      nvim-treesitter.withAllGrammars
+    ];
   };
 
 }
