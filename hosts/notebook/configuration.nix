@@ -10,7 +10,6 @@
     ../../modules/core/intel.nix
     ../../modules/core/power.nix
     ../../modules/desktop/gnome.nix
-    ../../modules/desktop/hyprland.nix
   ];
 
   # --- SISTEMA BASE ---
