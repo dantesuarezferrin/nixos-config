@@ -6,6 +6,6 @@
     ./dev
     ./apps
   ];
- 
+
   home.stateVersion = "24.11";
 }

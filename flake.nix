@@ -13,12 +13,22 @@
       url = "github:AlvaroParker/helium-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
-  {
-    nixosConfigurations.notebook =
-      nixpkgs.lib.nixosSystem {
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }:
+    {
+      nixosConfigurations.notebook = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
 
         modules = [
@@ -32,5 +42,5 @@
           }
         ];
       };
-  };
+    };
 }
