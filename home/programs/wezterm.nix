@@ -3,21 +3,32 @@
 {
   programs.wezterm = {
     enable = true;
-
     extraConfig = ''
       local wezterm = require 'wezterm'
+      local config = wezterm.config_builder()
 
-      return {
-        font = wezterm.font("JetBrains Mono"),
-        font_size = 13.0,
+      config.color_scheme = 'Gruvbox Dark (Grit)'
 
-        color_scheme = "Catppuccin Mocha",
+      config.font = wezterm.font('JetBrains Mono Nerd Font')
+      config.font_size = 11.5
 
-        enable_tab_bar = false,
-
-        default_prog = { "tmux" },
+      config.window_background_opacity = 0.92
+      config.window_padding = {
+        left = 12,
+        right = 12,
+        top = 12,
+        bottom = 12,
       }
+      
+      -- Ocultar la barra de pestañas si solo hay una abierta
+      config.hide_tab_bar_if_only_one_tab = true
+      
+      config.window_decorations = "RESIZE"
+
+      config.default_cursor_style = 'BlinkingBar'
+      config.force_reverse_video_cursor = true
+
+      return config
     '';
   };
 }
-
