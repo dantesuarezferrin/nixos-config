@@ -49,6 +49,7 @@
       indent-blankline.enable = true;
       bufferline.enable = true;
       telescope.enable = true;
+			nvim-autopairs.enable = true;
       treesitter.enable = true;
 
       dashboard = {

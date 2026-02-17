@@ -4,6 +4,10 @@
   programs.bash = {
     enable = true;
     
+		sessionVariables = {
+			DIRENV_LOG_FORMAT = "";
+		};
+
     shellAliases = {
       ll = "ls -l";
       update = "sudo nixos-rebuild switch --flake ~/nixos-config#notebook";
