@@ -3,14 +3,9 @@
 {
   imports = [ 
     ./hardware-configuration.nix
-    ../../modules/core/packages.nix
-    ../../modules/core/networking.nix
-    ../../modules/core/audio.nix
-    ../../modules/core/fonts.nix
-    ../../modules/core/intel.nix
-    ../../modules/core/power.nix
-    ../../modules/desktop/gnome.nix
-  ];
+  	../../modules/core/default.nix
+		../../modules/desktop/default.nix
+	];
 
   # --- SISTEMA BASE ---
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
