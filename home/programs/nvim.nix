@@ -83,16 +83,47 @@
       };
 
       # AUTOCOMPLETADO (CMP)
-      cmp = {
-        enable = true;
-        autoEnableSources = true;
-        settings.sources = [
-          { name = "nvim_lsp"; }
-          { name = "path"; }
-          { name = "buffer"; }
-        ];
-      };
-
+			cmp = {
+			  enable = true;
+			  autoEnableSources = true;
+			  settings = {
+			    sources = [
+			      { name = "nvim_lsp"; }
+			      { name = "path"; }
+			      { name = "buffer"; }
+			    ];
+			
+			    mapping = {
+			      "<C-n>" = "cmp.mapping.select_next_item()";         # Ctrl + n para bajar
+			      "<C-p>" = "cmp.mapping.select_prev_item()";         # Ctrl + p para subir
+			      "<C-d>" = "cmp.mapping.scroll_docs(-4)";            # Scroll de docu
+			      "<C-f>" = "cmp.mapping.scroll_docs(4)";
+			      "<C-Space>" = "cmp.mapping.complete()";             # Forzar a que aparezca
+			      "<C-e>" = "cmp.mapping.close()";                    # Cerrar menú
+			      
+			      "<CR>" = "cmp.mapping.confirm({ select = true })"; 
+			      
+			      "<Tab>" = ''
+			        cmp.mapping(function(fallback)
+			          if cmp.visible() then
+			            cmp.select_next_item()
+			          else
+			            fallback()
+			          end
+			        end, [ "i" "s" ])
+			      '';
+			      "<S-Tab>" = ''
+			        cmp.mapping(function(fallback)
+			          if cmp.visible() then
+			            cmp.select_prev_item()
+			          else
+			            fallback()
+			          end
+			        end, [ "i" "s" ])
+			      '';
+			    };
+			  };
+			};
       # LENGUAJES (LSP) - Integración corregida
       lsp = {
         enable = true;
