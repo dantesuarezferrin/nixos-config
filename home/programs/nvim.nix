@@ -9,44 +9,41 @@
     enable = true;
     defaultEditor = true;
 
-    # --- ESTÉTICA Y TEMA ---
     colorschemes.gruvbox.enable = true;
 
     # --- OPCIONES GLOBALES ---
     globals.mapleader = " ";
 
     opts = {
-      number = true;         # Números de línea
-      relativenumber = true; # Números relativos
-      shiftwidth = 2;        # Tamaño de indentación
-      tabstop = 2;           # Tamaño del tabulador
-      smartindent = true;    # Indentación inteligente
-      termguicolors = true;  # Colores reales en la terminal
-      cursorline = true;     # Resaltar la línea actual
+      number = true;         
+      relativenumber = true; 
+      shiftwidth = 2;        
+      tabstop = 2;           
+      smartindent = true;    
+      termguicolors = true;  
+      cursorline = true;     
     };
 
-    # --- ATAJOS DE TECLADO GENERALES ---
+    # --- KeyBinds ---
     keymaps = [
-      # Buscador (Telescope)
+      # Telescope
       { mode = "n"; key = "<leader>ff"; action = ":Telescope find_files<CR>"; options.desc = "Buscar archivos"; }
       { mode = "n"; key = "<leader>fg"; action = ":Telescope live_grep<CR>"; options.desc = "Buscar texto (grep)"; }
       { mode = "n"; key = "<leader>fb"; action = ":Telescope buffers<CR>"; options.desc = "Ver buffers abiertos"; }
       
-      # Navegación entre ventanas
+      # Navegación de ventanas 
       { mode = "n"; key = "<C-h>"; action = "<C-w>h"; }
       { mode = "n"; key = "<C-j>"; action = "<C-w>j"; }
       { mode = "n"; key = "<C-k>"; action = "<C-w>k"; }
       { mode = "n"; key = "<C-l>"; action = "<C-w>l"; }
 
-			# Navegacion entre buffers
-			{ mode = "n"; key = "<S-h>"; action = "<cmd>BufferLineCyclePrev<cr>"; options.desc = "Buffer anterior"; }
- 			{ mode = "n"; key = "<S-l>"; action = "<cmd>BufferLineCycleNext<cr>"; options.desc = "Buffer siguiente"; }
-			{ mode = "n"; key = "<leader>bd"; action = "<cmd>bdelete<cr>"; options.desc = "Cerrar buffer"; }
+      # Navegación de Buffers 
+      { mode = "n"; key = "<S-h>"; action = "<cmd>BufferLineCyclePrev<cr>"; options.desc = "Archivo anterior"; }
+      { mode = "n"; key = "<S-l>"; action = "<cmd>BufferLineCycleNext<cr>"; options.desc = "Archivo siguiente"; }
     ];
 
     # --- PLUGINS ---
     plugins = {
-      # Interfaz y Visual
       lualine.enable = true;
       web-devicons.enable = true;
       indent-blankline.enable = true;
@@ -54,7 +51,6 @@
       telescope.enable = true;
       treesitter.enable = true;
 
-      # DASHBOARD
       dashboard = {
         enable = true;
         settings = {
@@ -70,7 +66,6 @@
               "      ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝      "
               ""
               "             [ Dante's Development OS ]                 "
-              ""
             ];
             center = [
               { action = "Telescope find_files"; desc = " Buscar archivos"; icon = " "; key = "f"; }
@@ -83,66 +78,42 @@
       };
 
       # AUTOCOMPLETADO (CMP)
-			cmp = {
-			  enable = true;
-			  autoEnableSources = true;
-			  settings = {
-			    sources = [
-			      { name = "nvim_lsp"; }
-			      { name = "path"; }
-			      { name = "buffer"; }
-			    ];
-			
-			    mapping = {
-			      "<C-n>" = "cmp.mapping.select_next_item()";         # Ctrl + n para bajar
-			      "<C-p>" = "cmp.mapping.select_prev_item()";         # Ctrl + p para subir
-			      "<C-d>" = "cmp.mapping.scroll_docs(-4)";            # Scroll de docu
-			      "<C-f>" = "cmp.mapping.scroll_docs(4)";
-			      "<C-Space>" = "cmp.mapping.complete()";             # Forzar a que aparezca
-			      "<C-e>" = "cmp.mapping.close()";                    # Cerrar menú
-			      
-			      "<CR>" = "cmp.mapping.confirm({ select = true })"; 
-			      
-			      "<Tab>" = ''
-			        cmp.mapping(function(fallback)
-			          if cmp.visible() then
-			            cmp.select_next_item()
-			          else
-			            fallback()
-			          end
-			        end, [ "i" "s" ])
-			      '';
-			      "<S-Tab>" = ''
-			        cmp.mapping(function(fallback)
-			          if cmp.visible() then
-			            cmp.select_prev_item()
-			          else
-			            fallback()
-			          end
-			        end, [ "i" "s" ])
-			      '';
-			    };
-			  };
-			};
-      # LENGUAJES (LSP) - Integración corregida
+      cmp = {
+        enable = true;
+        autoEnableSources = true;
+        settings = {
+          sources = [
+            { name = "nvim_lsp"; }
+            { name = "path"; }
+            { name = "buffer"; }
+          ];
+          mapping = {
+            "<C-n>" = "cmp.mapping.select_next_item()";
+            "<C-p>" = "cmp.mapping.select_prev_item()";
+            "<C-Space>" = "cmp.mapping.complete()";
+            "<C-e>" = "cmp.mapping.abort()";
+            "<CR>" = "cmp.mapping.confirm({ select = true })";
+            "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+            "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+          };
+        };
+      };
+
+      # LSP
       lsp = {
         enable = true;
         keymaps.lspBuf = {
-          "gd" = "definition";       # Ir a definición
-          "gD" = "declaration";      # Ir a declaración
-          "gi" = "implementation";   # Ir a implementación
-          "gt" = "type_definition";  # Definición de tipo
-          "K"  = "hover";            # Ver documentación (flotante)
-          "<leader>rn" = "rename";   # Renombrar variable en todo el proyecto
-          "<leader>ca" = "code_action"; # Sugerencias de arreglo
+          "gd" = "definition";
+          "gD" = "declaration";
+          "gi" = "implementation";
+          "K"  = "hover";
+          "<leader>rn" = "rename";
+          "<leader>ca" = "code_action";
         };
-        
         servers = {
-          pyright.enable = true; # Python
-          ts_ls.enable = true;   # React
-          nixd.enable = true;    # NixOS
-          html.enable = true;
-          cssls.enable = true;
+          pyright.enable = true;
+          ts_ls.enable = true;
+          nixd.enable = true;
         };
       };
     };
