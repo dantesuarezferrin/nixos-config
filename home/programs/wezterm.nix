@@ -4,10 +4,11 @@
   programs.wezterm = {
     enable = true;
     extraConfig = ''
-			config.default_prog = { 'tmux', 'new-session', '-A', '-s', 'main' }
 
       local wezterm = require 'wezterm'
       local config = wezterm.config_builder()
+
+			config.default_prog = { 'tmux', 'new-session', '-A', '-s', 'main' }
 
       config.colors = {
         foreground    = "#ebdbb2",
