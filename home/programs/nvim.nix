@@ -37,6 +37,11 @@
       { mode = "n"; key = "<C-j>"; action = "<C-w>j"; }
       { mode = "n"; key = "<C-k>"; action = "<C-w>k"; }
       { mode = "n"; key = "<C-l>"; action = "<C-w>l"; }
+
+			# Navegacion entre buffers
+			{ mode = "n"; key = "<S-h>"; action = "<cmd>BufferLineCyclePrev<cr>"; options.desc = "Buffer anterior"; }
+ 			{ mode = "n"; key = "<S-l>"; action = "<cmd>BufferLineCycleNext<cr>"; options.desc = "Buffer siguiente"; }
+			{ mode = "n"; key = "<leader>bd"; action = "<cmd>bdelete<cr>"; options.desc = "Cerrar buffer"; }
     ];
 
     # --- PLUGINS ---
