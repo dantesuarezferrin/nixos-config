@@ -1,11 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  services.power-profiles-daemon.enable = false;
   hardware.cpu.intel.updateMicrocode = true;
 
   services.thermald.enable = true;
-
+	boot.kernelParams = [ "usbcore.autosuspend=-1" ];
   services.auto-cpufreq.enable = true;
   services.auto-cpufreq.settings = {
     battery = {
@@ -18,6 +17,7 @@
     };
   };
 
+	services.power-profiles-daemon.enable = false;
   services.tlp = {
     enable = true;
     settings = {
@@ -28,7 +28,7 @@
       CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance";
 
       PCIE_ASPM_ON_BAT = "powersave";
-      USB_AUTOSUSPEND = 1;
+      USB_AUTOSUSPEND = 0;
     };
   };
 
