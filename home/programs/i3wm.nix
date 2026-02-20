@@ -18,7 +18,7 @@
 				modifier = "Mod4";
 			in lib.mkOptionDefault {
 				"${modifier}+Return" = "exec wezterm";
-				"${modifier}+Space" = "exec exec ${pkgs.dmenu}/bin/dmenu_run";
+				"${modifier}+Space" = "exec ${pkgs.dmenu}/bin/dmenu_run";
 				"${modifier}+q" = "kill";
 				"${modifier}+w" = "exec helium";
 
