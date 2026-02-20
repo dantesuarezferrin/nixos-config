@@ -31,7 +31,7 @@
 			bars = [
 				{
 					position = "top";
-					satusCommand = "${pkgs.i3status}/bin/i3status";
+					statusCommand = "${pkgs.i3status}/bin/i3status";
 				}
 			];
 		};
