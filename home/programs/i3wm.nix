@@ -20,7 +20,7 @@
 				"${modifier}+Return" = "exec wezterm";
 				"${modifier}+Space" = "exec ${pkgs.dmenu}/bin/dmenu_run";
 				"${modifier}+q" = "kill";
-				"${modifier}+w" = "exec helium";
+				#"${modifier}+w" = "exec helium";
 
 				"${modifier}+h" = "focus left";
 				"${modifier}+j" = "focus down";
