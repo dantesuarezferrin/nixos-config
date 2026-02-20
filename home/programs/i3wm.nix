@@ -4,7 +4,7 @@
 	home.packages = with pkgs; [
 		i3status
 		dmenu
-		i3clock
+		i3lock
 	];
 
 
