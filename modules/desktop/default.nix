@@ -1,6 +1,7 @@
 {
 	imports = [
 		./gnome.nix
-		./hyprland.nix
+		#./hyprland.nix
+		./i3wm.nix
 	];
 }
