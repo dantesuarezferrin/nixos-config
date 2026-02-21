@@ -92,8 +92,8 @@
 				# Basicos
 				"${modifier}+w" = "exec helium";
 				"${modifier}+Return" = "exec wezterm";
-				"${modifier}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run";
 				"${modifier}+q" = "kill";
+				"${modifier}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run -fn 'JetBrains Mono Nerd Font-10' -nb '#282828' -nf '#ebdbb2' -sb '#cc241d' -sf '#ebdbb2'";
 
 				# Movimiento
 				"${modifier}+h" = "focus left";
