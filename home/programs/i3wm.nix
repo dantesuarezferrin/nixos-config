@@ -147,14 +147,54 @@
 	  };
 	
 	  modules = {
-	    "ipv6".enable = false;
-	    "wireless _first_".enable = true;
-	    "ethernet _first_".enable = true;
-	    "battery all".enable = true;
-	    "disk /".enable = true;
-	    "load".enable = true;
-	    "memory".enable = true;
-	    "tztime local".enable = true;
+			"ipv6".enable = false;
+			"ethernet _first_".enable = false;
+			"load".enable = false;
+
+			"disk /" = {
+				enable = true;
+				position = 1;
+				settings = { format = "  %avail";};
+			};
+			"cpu_usage" = {
+				enable = true;
+				position = 3;
+				settings = { format = "  %usage"; };
+			};
+			"memory" = {
+				enable = true;
+				position = 2;
+				settings = { format = "  %used"; };
+			};
+			"wireless _first_" = {
+				enable = true;
+				position = 4;
+				settings = {
+					format_up = "  %essid";
+					format_down = "󰖪  Off";
+				};
+			};
+			"battery all" = {
+				enable = true;
+				position = 5;
+				settings = {
+					format = "%status %percentage";
+					status_chr = "󱐋";
+					status_bat = "";
+					status_full ="";
+					low_threshold = 20;
+					integer_battery_capacity = true;
+					last_full_capacity = true;
+				};
+			};
+
+	    "tztime local" = {
+				enable = true;
+				position = 6;
+				settings = {
+					format = " %H:%M %d/%m ";
+				};
+			};
 	  };
 	};
 }
