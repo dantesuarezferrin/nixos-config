@@ -11,6 +11,7 @@
       "desk" = {
         fingerprint = {
           "HDMI-1" = "*"; 
+					"eDP-1" = "*";
         };
         config = {
           "HDMI-1" = {
@@ -28,13 +29,16 @@
       
       "mobile" = {
         fingerprint = {
-          "HDMI-1" = null;
+					"eDP-1" = "*";
         };
         config = {
           "eDP-1" = {
             enable = true;
             primary = true;
           };
+					"HDMI-1" = {
+						enable = false;
+					};
         };
       };
     };
