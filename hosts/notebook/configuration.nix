@@ -70,7 +70,23 @@
   home-manager.users.dante = import ../../home/dante.nix;
 
 	# --- AUTORANDR ---
-	services.udev.packages = [ pkgs.autorandr ];
+	systemd.services.autorandr-trigger = {
+	  description = "Disparador de autorandr para Dante";
+	  serviceConfig = {
+	    Type = "oneshot";
+	    User = "dante";
+	    ExecStart = "${pkgs.autorandr}/bin/autorandr --change --default mobile";
+	  };
+	  environment = {
+	    DISPLAY = ":0";
+	    XAUTHORITY = "/run/user/1000/gdm/Xauthority";
+	  };
+	};
+	
+	# La regla de udev se mantiene igual, ya que solo "toca el timbre"
+	services.udev.extraRules = ''
+	  ACTION=="change", SUBSYSTEM=="drm", TAG+="systemd", ENV{SYSTEMD_WANTS}="autorandr-trigger.service"
+	'';
 
 	# -- MONITORES DESPERTAR --
 	systemd.services.autorandr-resume = {
@@ -79,7 +95,7 @@
 	  wantedBy = [ "suspend.target" ];
 	  serviceConfig = {
 	    Type = "oneshot";
-	    ExecStart = "/run/current-system/sw/bin/sudo -u dante ${pkgs.autorandr}/bin/autorandr --batch --change --default mobile";
+	    ExecStart = "/run/current-system/sw/bin/sudo -u dante ${pkgs.autorandr}/bin/autorandr --change --default mobile";
 	  };
 	};
 
