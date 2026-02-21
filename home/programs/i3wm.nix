@@ -16,7 +16,9 @@
 			keybindings = let
 				modifier = "Mod4";
 			in lib.mkOptionDefault {
-				"${modifier}+Space" = "exec ${pkgs.dmenu}/bin/dmenu_run";
+				"${modifier}+w" = "exec helium";
+				"${modifier}+Return" = "exec wezterm";
+				"${modifier}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run";
 				"${modifier}+q" = "kill";
 
 				"${modifier}+h" = "focus left";
