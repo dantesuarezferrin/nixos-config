@@ -72,4 +72,17 @@
 	# --- AUTORANDR ---
 	services.udev.packages = [ pkgs.autorandr ];
 
+	# -- MONITORES DESPERTAR --
+	systemd.services.autorandr-resume = {
+	  description = "Re-apply autorandr on resume";
+	  after = [ "suspend.target" "hibernate.target" "hybrid-sleep.target" ];
+	  wantedBy = [ "suspend.target" "hibernate.target" "hybrid-sleep.target" ];
+	  serviceConfig = {
+	    Type = "oneshot";
+	    ExecStart = "${pkgs.autorandr}/bin/autorandr --batch --change --default mobile";
+	    User = "dante";
+	    Environment = "DISPLAY=:0 XAUTHORITY=/home/dante/.Xauthority";
+  };
+};
+
 }
