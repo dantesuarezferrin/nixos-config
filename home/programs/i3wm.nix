@@ -10,6 +10,11 @@
 	];
 
 
+	xresources.properties = {
+		"Xcursor.theme" = "Bibata-Modern-Amber";
+		"Xcursor.size" = 18;
+	};
+
 	xsession.windowManager.i3 = {
 		enable = true;
 		config = {
@@ -31,15 +36,7 @@
 				always = true;
 				notification = false;
 				}
-
-				{
-					#Cursor
-					command = "xsetroot -Bibata-Modern-Amber left_ptr";
-					always = true;
-					notification = false;
-				}
-				
-			];
+		];
 
 			# Windows 
 			window = {
