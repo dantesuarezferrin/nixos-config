@@ -31,6 +31,14 @@
 				always = true;
 				notification = false;
 				}
+
+				{
+					#Cursor
+					command = "xsetroot -Bibata-Modern-Amber left_ptr";
+					always = true;
+					notification = false;
+				}
+				
 			];
 
 			# Windows 

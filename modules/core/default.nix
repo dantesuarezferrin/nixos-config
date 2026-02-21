@@ -7,5 +7,6 @@
 		./docker.nix
 		./packages.nix
 		./networking.nix
+		./cursor.nix
 	];
 }
