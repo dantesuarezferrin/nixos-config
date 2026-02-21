@@ -4,7 +4,7 @@
   programs.autorandr = {
     enable = true;
     hooks.postswitch = {
-      "restart-i3" = "i3-msg restart"; 
+      "restart-i3" = "${pkgs.i3}/bin/i3-msg restart"; 
     };
     
     profiles = {

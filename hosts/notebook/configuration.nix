@@ -69,4 +69,7 @@
   home-manager.useUserPackages = true;
   home-manager.users.dante = import ../../home/dante.nix;
 
+	# --- AUTORANDR ---
+	services.udev.packages = [ pkgs.autorandr ];
+
 }
