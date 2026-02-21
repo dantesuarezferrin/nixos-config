@@ -1,12 +1,16 @@
 { pkgs, ...}:
 
 {
-	home.pointerCursor = {
-		gtk.enable = true;
-		x11.enable = true;
+	environment.systemPackages = [
+		pkgs.bibata-cursors
+	];
 
-		package = pkgs.bibata-cursors;
-		name = "Bibata-Modern-Amber";
-		size = 18;
+	environment.variables = {
+		XCURSOR_THEME = "Bibata-Modern-Amber";
+		XCURSOR_SIZE = "18";
 	};
+
+	services.xserver.displayManager.sessionCommands = "${pkgs.xorg.xsetroot}/bin/xsetroot -cursor_name left_ptf";
+
+	programs.dconf.enable = true;
 }
