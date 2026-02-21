@@ -18,7 +18,7 @@
             enable = true;
             primary = true;
             mode = "1920x1080";
-            rate = "144.00";
+            rate = "144";
           };
           "eDP-1" = { 
             enable = true;
