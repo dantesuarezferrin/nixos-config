@@ -11,6 +11,7 @@
 
 		opacityRules = [
 			"100:class_g = 'wezterm'"
+			"90:class_g = 'obsidian'"
 		];
 		
 		settings = {
