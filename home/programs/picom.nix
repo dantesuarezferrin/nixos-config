@@ -1,7 +1,7 @@
 {pkgs, ...}:
 {
 	services.picom = {
-		enalbe = true;
+		enable = true;
 
 		backend = "glx";
 		vSync = true;
