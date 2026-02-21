@@ -74,15 +74,13 @@
 
 	# -- MONITORES DESPERTAR --
 	systemd.services.autorandr-resume = {
-	  description = "Re-apply autorandr on resume";
-	  after = [ "suspend.target" "hibernate.target" "hybrid-sleep.target" ];
-	  wantedBy = [ "suspend.target" "hibernate.target" "hybrid-sleep.target" ];
+	  description = "Refrescar monitores al despertar";
+	  after = [ "suspend.target" ];
+	  wantedBy = [ "suspend.target" ];
 	  serviceConfig = {
 	    Type = "oneshot";
-	    ExecStart = "${pkgs.autorandr}/bin/autorandr --batch --change --default mobile";
-	    User = "dante";
-	    Environment = "DISPLAY=:0 XAUTHORITY=/home/dante/.Xauthority";
-  };
-};
+	    ExecStart = "/run/current-system/sw/bin/sudo -u dante ${pkgs.autorandr}/bin/autorandr --batch --change --default mobile";
+	  };
+	};
 
 }
