@@ -15,10 +15,15 @@
 		
 		settings = {
 			corner-radius = 8;
+			corner-radius-exclude = [
+				"window_type = 'dock'"
+				"class_g = 'i3bar'"
+			];
 			shadow-exclude = [
 				"name = 'Notification'"
 				"class_g = 'Dmenu'"
 			];
+			
 		};
 	};
 }
