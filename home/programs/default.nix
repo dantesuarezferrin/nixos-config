@@ -8,5 +8,6 @@
     ./bash.nix
 		./i3wm.nix
     ./hledger.nix
+		./picom.nix
   ];
 }
