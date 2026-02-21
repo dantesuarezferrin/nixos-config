@@ -75,6 +75,7 @@
 	  serviceConfig = {
 	    Type = "oneshot";
 	    User = "dante";
+			ExecStartPre = "${pkgs.coreutils}/bin/sleep 2";
 	    ExecStart = "${pkgs.autorandr}/bin/autorandr --change --default mobile";
 	  };
 	  environment = {
