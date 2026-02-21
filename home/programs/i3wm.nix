@@ -19,13 +19,6 @@
 
 			#Startup
 			startup = [
-			
-				{
-				#Display
-				command = "xrandr --output HDMI-1 --primary --mode 1920x1080 --rate 144.00";
-				always = true;
-				notification = false;
-				}
 
 				{
 				#Wallpaper
@@ -135,6 +128,10 @@
 					};
 				}
 			];
+
+    workspaceOutputAssign = [
+      { workspace = "1"; output = [ "HDMI-1" "eDP-1" ]; }
+    ];
 		};
 	};
 
