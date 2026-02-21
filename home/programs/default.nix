@@ -10,5 +10,6 @@
     ./hledger.nix
 		./picom.nix
 		./gammastep.nix
+		./autorandr.nix
   ];
 }
