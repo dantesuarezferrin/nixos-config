@@ -22,6 +22,8 @@
       }
     ];
 
+		
+
     extraConfig = ''
       set -g history-limit 100000
       set -g base-index 1
@@ -44,6 +46,10 @@
       bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -in -selection clipboard"
       bind-key -T copy-mode y send-keys -X copy-pipe-and-cancel "xclip -in -selection clipboard"
       bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -in -selection clipboard"
+			
+			bind c new-window -c "#{pane_current_path}"
+			bind '"' split-window -c "#{pane_current_path}"
+			bind "%" split-window -h -c "#{pane_current_path}"
     '';
   };
 }
