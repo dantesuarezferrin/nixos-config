@@ -9,5 +9,6 @@
 		arandr
 		dmenu
 		gemini-cli
+		xclip
   ];
 }
