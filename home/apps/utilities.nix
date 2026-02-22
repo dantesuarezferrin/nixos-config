@@ -8,5 +8,6 @@
 		playerctl
 		arandr
 		dmenu
+		gemini-cli
   ];
 }

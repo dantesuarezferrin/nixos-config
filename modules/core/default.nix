@@ -8,5 +8,6 @@
 		./packages.nix
 		./networking.nix
 		./cursor.nix
+		./autorandr-services.nix
 	];
 }
