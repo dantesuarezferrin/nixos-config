@@ -10,5 +10,9 @@
 		dmenu
 		gemini-cli
 		xclip
+		sesh
+		fzf
+		fd
+		zoxide
   ];
 }

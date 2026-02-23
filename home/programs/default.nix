@@ -10,6 +10,7 @@
     ./hledger.nix
 		./picom.nix
 		./gammastep.nix
-		./autorandr.nix
-  ];
-}
+		    ./autorandr.nix
+		    ./zoxide.nix
+		  ];
+		}

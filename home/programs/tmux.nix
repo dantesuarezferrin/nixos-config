@@ -50,6 +50,19 @@
 			bind c new-window -c "#{pane_current_path}"
 			bind '"' split-window -c "#{pane_current_path}"
 			bind "%" split-window -h -c "#{pane_current_path}"
+
+      # Sesh
+      bind-key "T" run-shell "sesh connect \"$(
+        sesh list | fzf-tmux -p 55%,60% \
+          --no-sort --ansi --border-label ' sesh ' --prompt '⚡  ' \
+          --header '  ^a all ^t tmux ^x zoxide ^f find' \
+          --bind 'tab:down,btab:up' \
+          --bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list)' \
+          --bind 'ctrl-t:change-prompt(🪟  )+reload(sesh list -t)' \
+          --bind 'ctrl-x:change-prompt(📁  )+reload(sesh list -z)' \
+          --bind 'ctrl-f:change-prompt(🔎  )+reload(fd -H -d 2 -t d -E .git . ~)' \
+          --bind 'ctrl-d:execute(tmux kill-session -t {})+change-prompt(⚡  )+reload(sesh list)'
+      )\""
     '';
   };
 }
