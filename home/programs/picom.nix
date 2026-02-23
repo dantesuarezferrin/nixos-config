@@ -18,6 +18,7 @@
 			shadow-exclude = [
 				"name = 'Notification'"
 				"class_g = 'Dmenu'"
+				"class_g = 'helium'"
 				"class_g = 'i3bar'"
 				"window_type = 'dock'"
 			];
