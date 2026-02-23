@@ -151,24 +151,34 @@
 			"ethernet _first_".enable = false;
 			"load".enable = false;
 
-			"disk /" = {
+			"volume master" = {
 				enable = true;
 				position = 1;
+				settings = {
+					format = " %volume";
+					format_muted = " ";
+					device = "pulse";
+				};
+			};
+
+			"disk /" = {
+				enable = true;
+				position = 2;
 				settings = { format = "  %avail";};
 			};
 			"cpu_usage" = {
 				enable = true;
-				position = 3;
+				position = 4;
 				settings = { format = "  %usage"; };
 			};
 			"memory" = {
 				enable = true;
-				position = 2;
+				position = 3;
 				settings = { format = "  %used"; };
 			};
 			"wireless _first_" = {
 				enable = true;
-				position = 4;
+				position = 5;
 				settings = {
 					format_up = "  %essid";
 					format_down = "󰖪  Off";
@@ -176,7 +186,7 @@
 			};
 			"battery all" = {
 				enable = true;
-				position = 5;
+				position = 6;
 				settings = {
 					format = "%status %percentage";
 					status_chr = "󱐋";
@@ -190,7 +200,7 @@
 
 	    "tztime local" = {
 				enable = true;
-				position = 6;
+				position = 7;
 				settings = {
 					format = " %H:%M %d/%m ";
 				};
