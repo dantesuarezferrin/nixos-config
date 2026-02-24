@@ -9,5 +9,6 @@
 		./networking.nix
 		./cursor.nix
 		./autorandr-services.nix
+		./displayManager.nix
 	];
 }
