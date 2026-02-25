@@ -14,5 +14,6 @@
 		fzf
 		fd
 		zoxide
+		nnn
   ];
 }
