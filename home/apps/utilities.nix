@@ -15,5 +15,6 @@
 		fd
 		zoxide
 		nnn
+		simplescreenrecorder
   ];
 }
