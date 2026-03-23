@@ -60,9 +60,13 @@
   users.users.dante = {
     isNormalUser = true;
     description = "Dante Suarez";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "kvm" ];
   };
   nix.settings.trusted-users = ["root" "dante"];
+
+	# --- MAQUINA VIRTUAL ---
+	virtualisation.libvirtd.enable = true;
+	programs.virt-manager.enable = true;
 
   # --- HOME MANAGER ---
   home-manager.useGlobalPkgs = true;
