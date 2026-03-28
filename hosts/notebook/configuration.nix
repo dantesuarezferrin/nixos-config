@@ -67,6 +67,7 @@
 	# --- MAQUINA VIRTUAL ---
 	virtualisation.libvirtd.enable = true;
 	programs.virt-manager.enable = true;
+	virtualisation.spiceUSBRedirection = true;
 
   # --- HOME MANAGER ---
   home-manager.useGlobalPkgs = true;
