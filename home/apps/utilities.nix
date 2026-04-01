@@ -17,6 +17,6 @@
 		zoxide
 		nnn
 		simplescreenrecorder
-		retroarch
+		retroarch-full
   ];
 }
