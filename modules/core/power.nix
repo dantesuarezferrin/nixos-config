@@ -3,8 +3,21 @@
 {
   hardware.cpu.intel.updateMicrocode = true;
 
+  # Performance & Gaming
+  programs.gamemode.enable = true;
+  services.ananicy = {
+    enable = true;
+    package = pkgs.ananicy-cpp;
+    rulesPkgs = [ pkgs.ananicy-rules-cachyos ];
+  };
+
+  # Memory optimization
+  zramSwap.enable = true;
+
+  # Thermal & Power Management
   services.thermald.enable = true;
-	boot.kernelParams = [ "usbcore.autosuspend=-1" ];
+  boot.kernelParams = [ "usbcore.autosuspend=-1" ];
+
   services.auto-cpufreq.enable = true;
   services.auto-cpufreq.settings = {
     battery = {
@@ -17,20 +30,9 @@
     };
   };
 
-	services.power-profiles-daemon.enable = false;
-  services.tlp = {
-    enable = true;
-    settings = {
-      CPU_SCALING_GOVERNOR_ON_AC = "performance";
-      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-      CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance";
-
-      PCIE_ASPM_ON_BAT = "powersave";
-      USB_AUTOSUSPEND = 0;
-    };
-  };
+  # Disable TLP and Power Profiles Daemon to avoid conflicts with auto-cpufreq
+  services.power-profiles-daemon.enable = false;
+  services.tlp.enable = false;
 
   powerManagement.powertop.enable = true;
 }
