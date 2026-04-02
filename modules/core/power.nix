@@ -8,7 +8,7 @@
   services.ananicy = {
     enable = true;
     package = pkgs.ananicy-cpp;
-    rulesPkgs = [ pkgs.ananicy-rules-cachyos ];
+    rulesProvider = pkgs.ananicy-rules-cachyos;
   };
 
   # Memory optimization
