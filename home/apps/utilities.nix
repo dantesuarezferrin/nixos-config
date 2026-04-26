@@ -18,5 +18,6 @@
 		nnn
 		simplescreenrecorder
   	melonds
+		mgba
 	];
 }

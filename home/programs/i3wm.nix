@@ -114,7 +114,7 @@
 					statusCommand = "${pkgs.i3status}/bin/i3status";
 					fonts = {
 						names = [ "JetBrains Mono Nerd Font"];
-						size = 10.0;
+						size = 6.0;
 					};
 					colors = {
 						background = "#282828"; # Gruvbox Dark
