@@ -13,6 +13,5 @@
 		./gammastep.nix
 		    ./autorandr.nix
 		    ./zoxide.nix
-		./scripts.nix
 		  ];
 		}

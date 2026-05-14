@@ -14,23 +14,17 @@
 
 	xsession.windowManager.i3 = {
 		enable = true;
-		extraConfig = ''
-			set_from_resource $fg i3wm.foreground #ebdbb2
-			set_from_resource $bg i3wm.background #282828
-			set_from_resource $cursor i3wm.cursorColor #ebdbb2
-
-			# Pywal colors
-			include /home/dante/.cache/wal/colors-i3
-		'';
 		config = {
 			modifier = "Mod4";
 
 			#Startup
 			startup = [
+
 				{
-					command = "wal -R";
-					always = true;
-					notification = false;
+				#Wallpaper
+				command = "feh --bg-fill '/home/dante/Pictures/redflow.jpg'";
+				always = true;
+				notification = false;
 				}
 		];
 
@@ -46,35 +40,41 @@
 			};
 			
 			# Colors
-			colors = {
+			colors = let 
+        bg      = "#282828";
+        red     = "#cc241d";  
+        gray    = "#928374";
+        text    = "#ebdbb2";
+        inactive = "#3c3836";
+      in {
         #               border  bg      text    indicator childBorder
         focused = {
-          border = "$color1"; 
-          background = "$color1"; 
-          text = "$foreground"; 
-          indicator = "$color1"; 
-          childBorder = "$color1";
+          border = red; 
+          background = red; 
+          text = text; 
+          indicator = red; 
+          childBorder = red;
         };
         focusedInactive = {
-          border = "$color8"; 
-          background = "$color8"; 
-          text = "$color15"; 
-          indicator = "$color8"; 
-          childBorder = "$color8";
+          border = inactive; 
+          background = inactive; 
+          text = gray; 
+          indicator = inactive; 
+          childBorder = inactive;
         };
         unfocused = {
-          border = "$background"; 
-          background = "$background"; 
-          text = "$color15"; 
-          indicator = "$background"; 
-          childBorder = "$background";
+          border = bg; 
+          background = bg; 
+          text = gray; 
+          indicator = bg; 
+          childBorder = bg;
         };
         urgent = {
-          border = "$color9"; 
-          background = "$color9"; 
-          text = "$foreground"; 
-          indicator = "$color9"; 
-          childBorder = "$color9";
+          border = "#fb4934"; 
+          background = "#fb4934"; 
+          text = text; 
+          indicator = "#fb4934"; 
+          childBorder = "#fb4934";
         };
       };
 
@@ -117,13 +117,13 @@
 						size =  12.0;
 					};
 					colors = {
-						background = "$background";
-			      statusline = "$foreground";
-			      separator  = "$color8";
+						background = "#282828"; # Gruvbox Dark
+			      statusline = "#ebdbb2";
+			      separator  = "#665c54";
 			      focusedWorkspace = {
-			        border = "$color1";
-			        background = "$color1";
-			        text = "$foreground";
+			        border = "#cc241d";
+			        background = "#cc241d";
+			        text = "#ebdbb2";
 						};
 					};
 				}

@@ -9,8 +9,6 @@
 		playerctl
 		arandr
 		dmenu
-		pywal
-		imagemagick
 		gemini-cli
 		xclip
 		sesh
