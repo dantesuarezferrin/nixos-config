@@ -86,7 +86,7 @@
 				"${modifier}+w" = "exec helium";
 				"${modifier}+Return" = "exec wezterm";
 				"${modifier}+q" = "kill";
-				"${modifier}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run -fn 'JetBrains Mono Nerd Font-10' -nb '#282828' -nf '#ebdbb2' -sb '#cc241d' -sf '#ebdbb2'";
+				"${modifier}+d" = "exec --no-startup-id rofi -show drun";
 
 				# Movimiento
 				"${modifier}+h" = "focus left";
@@ -114,7 +114,7 @@
 					statusCommand = "${pkgs.i3status}/bin/i3status";
 					fonts = {
 						names = [ "JetBrains Mono Nerd Font"];
-						size = 6.0;
+						size =  12.0;
 					};
 					colors = {
 						background = "#282828"; # Gruvbox Dark

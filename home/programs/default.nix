@@ -7,6 +7,7 @@
     ./wezterm.nix
     ./bash.nix
 		./i3wm.nix
+		./rofi.nix
     ./hledger.nix
 		./picom.nix
 		./gammastep.nix
