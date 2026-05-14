@@ -12,6 +12,7 @@
       ll = "ls -l";
       update = "sudo nixos-rebuild switch --flake ~/nixos-config#notebook";
       config = "cd ~/nixos-config && nvim";
+			theme = "set-theme";
     };
 
     initExtra = ''
