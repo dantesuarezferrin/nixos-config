@@ -78,4 +78,6 @@
 		];
 	};
 
+	# --- Nix-Ld ---
+	programs.nix-ld.enable = true;
 }

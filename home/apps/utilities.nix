@@ -19,5 +19,7 @@
 		simplescreenrecorder
   	melonds
 		mgba
+		qbittorrent
+		mplayer
 	];
 }
