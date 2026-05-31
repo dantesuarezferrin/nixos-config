@@ -21,5 +21,6 @@
 		mgba
 		qbittorrent
 		mplayer
+		librecad
 	];
 }
