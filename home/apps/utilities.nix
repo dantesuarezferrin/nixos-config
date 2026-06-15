@@ -22,5 +22,7 @@
 		qbittorrent
 		mplayer
 		librecad
+		onlyoffice-desktopeditors
+		proton-vpn
 	];
 }
