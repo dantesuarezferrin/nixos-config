@@ -56,8 +56,12 @@
       telescope.enable = true;
 			nvim-autopairs.enable = true;
       treesitter.enable = true;
-			vimtex.enalbe = true;
-
+            vimtex = {
+              enable = true;
+              view = {
+                method = "zathura";
+              };
+            };
       dashboard = {
         enable = true;
         settings = {
