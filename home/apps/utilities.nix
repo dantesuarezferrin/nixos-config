@@ -23,6 +23,6 @@
 		mplayer
 		librecad
 		onlyoffice-desktopeditors
-		protonvpn-gui
+		zathura
 	];
 }
