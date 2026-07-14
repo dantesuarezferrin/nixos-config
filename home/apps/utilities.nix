@@ -25,5 +25,6 @@
 		onlyoffice-desktopeditors
 		texliveFull
 		poppler-utils
+		zathura
 	];
 }
