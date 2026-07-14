@@ -56,13 +56,13 @@
       telescope.enable = true;
 			nvim-autopairs.enable = true;
       treesitter.enable = true;
-            vimtex = {
-              enable = true;
-              view = {
-                method = "zathura";
-              };
-            };
-      dashboard = {
+                  vimtex = {
+                    enable = true;
+                    view.general = {
+                      executable = "zathura";
+                      options = ["--synctex-forward" "%l:1:%f" "%o"];
+                    };
+                  };      dashboard = {
         enable = true;
         settings = {
           theme = "doom";

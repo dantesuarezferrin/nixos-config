@@ -23,6 +23,7 @@
 		mplayer
 		librecad
 		onlyoffice-desktopeditors
-		zathura
+		texliveFull
+		poppler-utils
 	];
 }
