@@ -42,20 +42,6 @@
   console.keyMap = "la-latin1";
   services.printing.enable = true;
 
-  # --- AUDIO (Pipewire) ---
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
-
-  # --- RED ---
-  networking.networkmanager.enable = true;
-  networking.hostName = "notebook";
-
   # --- USUARIOS ---
   users.users.dante = {
     isNormalUser = true;
@@ -70,8 +56,7 @@
 	virtualisation.spiceUSBRedirection.enable = true;
 
   # --- HOME MANAGER ---
-  home-manager.useGlobalPkgs = true;
-  home-manager.useUserPackages = true;
+
   home-manager.users.dante = {
 		imports = [
 			../../home/dante.nix 

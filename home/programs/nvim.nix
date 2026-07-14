@@ -56,6 +56,7 @@
       telescope.enable = true;
 			nvim-autopairs.enable = true;
       treesitter.enable = true;
+			vimtex.enalbe = true;
 
       dashboard = {
         enable = true;

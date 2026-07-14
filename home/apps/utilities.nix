@@ -13,8 +13,8 @@
 		xclip
 		sesh
 		fzf
-		fd
-		zoxide
+
+
 		nnn
 		simplescreenrecorder
   	melonds
@@ -23,6 +23,6 @@
 		mplayer
 		librecad
 		onlyoffice-desktopeditors
-		proton-vpn
+		protonvpn-gui
 	];
 }

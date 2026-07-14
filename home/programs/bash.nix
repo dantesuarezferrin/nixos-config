@@ -4,9 +4,7 @@
   programs.bash = {
     enable = true;
     
-		sessionVariables = {
-			DIRENV_LOG_FORMAT = "";
-		};
+
 
     shellAliases = {
       ll = "ls -l";

@@ -162,17 +162,17 @@
 			};
 
 			"disk /" = {
-				enable = true;
+				enable = false;
 				position = 2;
 				settings = { format = "  %avail";};
 			};
 			"cpu_usage" = {
-				enable = true;
+				enable = false;
 				position = 4;
 				settings = { format = "  %usage"; };
 			};
 			"memory" = {
-				enable = true;
+				enable = false;
 				position = 3;
 				settings = { format = "  %used"; };
 			};
@@ -180,15 +180,15 @@
 				enable = true;
 				position = 5;
 				settings = {
-					format_up = "  %essid";
-					format_down = "󰖪  Off";
+					format_up = " ";
+					format_down = "󰖪 ";
 				};
 			};
 			"battery all" = {
 				enable = true;
 				position = 6;
 				settings = {
-					format = "%status %percentage";
+					format = "%percentage %status";
 					status_chr = "󱐋";
 					status_bat = "";
 					status_full ="";
@@ -202,7 +202,7 @@
 				enable = true;
 				position = 7;
 				settings = {
-					format = " %H:%M %d/%m ";
+					format = " %H:%M ";
 				};
 			};
 	  };
