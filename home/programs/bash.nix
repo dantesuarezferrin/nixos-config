@@ -10,6 +10,7 @@
       ll = "ls -l";
       update = "sudo nixos-rebuild switch --flake ~/nixos-config#notebook";
       config = "cd ~/nixos-config && nvim";
+			facu = "cd ~/Documents/dante-vault/Facultad && nvim";
     };
 
     initExtra = ''
