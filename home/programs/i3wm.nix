@@ -106,6 +106,9 @@
 				"XF86AudioPlay" = "exec --no-startup-id playerctl play-pause";
 				"XF86AudioNext" = "exec --no-startup-id playerctl next";
 				"XF86AudioPrev" = "exec --no-startup-id playerctl previous";
+
+				# Screenshot
+				"${modifier}+s" = "exec flameshot gui";
 			};
 
 			bars = [

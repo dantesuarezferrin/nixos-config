@@ -45,6 +45,9 @@
       # Navegación de Buffers 
       { mode = "n"; key = "<S-h>"; action = "<cmd>BufferLineCyclePrev<cr>"; options.desc = "Archivo anterior"; }
       { mode = "n"; key = "<S-l>"; action = "<cmd>BufferLineCycleNext<cr>"; options.desc = "Archivo siguiente"; }
+
+			# VimTex 
+			{ mode = "n"; key = "<leader>ll"; action = ":VimtexCompile";}
     ];
 
     # --- PLUGINS ---
@@ -56,13 +59,13 @@
       telescope.enable = true;
 			nvim-autopairs.enable = true;
       treesitter.enable = true;
-                  vimtex = {
-                    enable = true;
-                    view.general = {
-                      executable = "zathura";
-                      options = ["--synctex-forward" "%l:1:%f" "%o"];
-                    };
-                  };      dashboard = {
+      vimtex = {
+      	enable = true;
+      	settings = {
+					view_method = "zathura";
+				};
+			};   
+			dashboard = {
         enable = true;
         settings = {
           theme = "doom";
@@ -125,6 +128,7 @@
           pyright.enable = true;
           ts_ls.enable = true;
           nixd.enable = true;
+					texlab.enable = true;
         };
       };
     };

@@ -11,7 +11,8 @@
     ./hledger.nix
 		./picom.nix
 		./gammastep.nix
-		    ./autorandr.nix
-		    ./zoxide.nix
-		  ];
-		}
+		./autorandr.nix
+		./zoxide.nix
+		./prism.nix
+	];
+}
