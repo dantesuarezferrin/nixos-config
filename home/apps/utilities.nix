@@ -27,6 +27,8 @@
 		poppler-utils
 		zathura
 		xdotool
+
+		octaveFull
 	];
 
   xdg.mimeApps.defaultApplications = {
