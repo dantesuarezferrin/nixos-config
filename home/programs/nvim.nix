@@ -10,11 +10,11 @@
     defaultEditor = true;
 
     colorschemes.gruvbox = {
-			enable = true;
-			settings = {
-				transparent_mode = true;
-			};
-		};
+      enable = true;
+      settings = {
+        transparent_mode = true;
+      };
+    };
 
     # --- OPCIONES GLOBALES ---
     globals.mapleader = " ";
@@ -46,8 +46,8 @@
       { mode = "n"; key = "<S-h>"; action = "<cmd>BufferLineCyclePrev<cr>"; options.desc = "Archivo anterior"; }
       { mode = "n"; key = "<S-l>"; action = "<cmd>BufferLineCycleNext<cr>"; options.desc = "Archivo siguiente"; }
 
-			# VimTex 
-			{ mode = "n"; key = "<leader>ll"; action = ":VimtexCompile";}
+      # VimTex 
+      { mode = "n"; key = "<leader>ll"; action = ":VimtexCompile";}
     ];
 
     # --- PLUGINS ---
@@ -57,15 +57,19 @@
       indent-blankline.enable = true;
       bufferline.enable = true;
       telescope.enable = true;
-			nvim-autopairs.enable = true;
+      nvim-autopairs.enable = true;
       treesitter.enable = true;
+      
+      # Motor de plantillas (Obligatorio para que cmp funcione)
+      luasnip.enable = true;
+
       vimtex = {
-      	enable = true;
-      	settings = {
-					view_method = "zathura";
-				};
-			};   
-			dashboard = {
+        enable = true;
+        settings = {
+          view_method = "zathura";
+        };
+      };   
+      dashboard = {
         enable = true;
         settings = {
           theme = "doom";
@@ -96,8 +100,12 @@
         enable = true;
         autoEnableSources = true;
         settings = {
+          snippet = {
+            expand = "function(args) require('luasnip').lsp_expand(args.body) end";
+          };
           sources = [
             { name = "nvim_lsp"; }
+            { name = "luasnip"; }
             { name = "path"; }
             { name = "buffer"; }
           ];
@@ -124,7 +132,7 @@
           "<leader>rn" = "rename";
           "<leader>ca" = "code_action";
         };
-				servers = {
+        servers = {
           pyright.enable = true;
           ts_ls.enable = true;
           nixd.enable = true;
