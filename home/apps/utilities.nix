@@ -9,7 +9,7 @@
 		playerctl
 		arandr
 		dmenu
-		gemini-cli
+		antigravity
 		xclip
 		sesh
 		fzf

@@ -124,11 +124,19 @@
           "<leader>rn" = "rename";
           "<leader>ca" = "code_action";
         };
-        servers = {
+				servers = {
           pyright.enable = true;
           ts_ls.enable = true;
           nixd.enable = true;
-					texlab.enable = true;
+          texlab.enable = true;
+          jdtls.enable = true;
+          clangd.enable = true;
+          omnisharp.enable = true;
+          html.enable = true;
+          cssls.enable = true;
+          jsonls.enable = true;
+          bashls.enable = true;
+					sqlls.enable = true;
         };
       };
     };

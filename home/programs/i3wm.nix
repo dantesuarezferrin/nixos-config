@@ -192,9 +192,9 @@
 				position = 6;
 				settings = {
 					format = "%percentage %status";
-					status_chr = "󱐋";
-					status_bat = "";
-					status_full ="";
+					status_chr = "󱐋 ";
+					status_bat = " ";
+					status_full =" ";
 					low_threshold = 20;
 					integer_battery_capacity = true;
 					last_full_capacity = true;
