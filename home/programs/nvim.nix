@@ -136,7 +136,6 @@
           cssls.enable = true;
           jsonls.enable = true;
           bashls.enable = true;
-					sqlls.enable = true;
         };
       };
     };
