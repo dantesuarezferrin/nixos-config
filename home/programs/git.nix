@@ -14,7 +14,11 @@
           email = "dante.suarezferrin1@gmail.com";
         };
     };
-    
+  	
+		extraConfig = {
+			credential.helper = "store";
+		};
   };
   programs.delta.enable = true;
+
 }
