@@ -8,7 +8,6 @@
   ];
 
   home.stateVersion = "24.11";
-  users.dante = import ./path/to/your/home.nix;
 
   xdg.mimeApps.enable = true;
   xdg.configFile."mimeapps.list".force = true;
