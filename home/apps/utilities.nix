@@ -29,6 +29,7 @@
 		xdotool
 
 		octaveFull
+		inputs.finanzas.packages.${pkgs.system}.default
 	];
 
   xdg.mimeApps.defaultApplications = {
@@ -50,4 +51,5 @@
 			};
 		};
 	};
+	
 }

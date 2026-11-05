@@ -18,6 +18,8 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+		finanzas.url = "path:/home/dante/projects/finanzas";
   };
 
   outputs =
