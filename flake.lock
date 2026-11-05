@@ -1,5 +1,20 @@
 {
   "nodes": {
+    "finanzas": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1793840114,
+        "narHash": "sha256-MTkvFBf+PhkXpNMNRXVy8JYvn0Hlpwfk3yFt8q0eRZA=",
+        "path": "/home/dante/projects/finanzas",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/dante/projects/finanzas",
+        "type": "path"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -99,6 +114,22 @@
     },
     "nixpkgs": {
       "locked": {
+        "lastModified": 1793540411,
+        "narHash": "sha256-fiPJ88izTVucjeo2EQ3jk4aWmLg03I1D4vxnX2QjEgE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "0bb2eedc20e4739f29e8045034f2828ad7054f8f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
         "lastModified": 1771008912,
         "narHash": "sha256-gf2AmWVTs8lEq7z/3ZAsgnZDhWIckkb+ZnAo5RzSxJg=",
         "owner": "NixOS",
@@ -137,9 +168,10 @@
     },
     "root": {
       "inputs": {
+        "finanzas": "finanzas",
         "helium": "helium",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim"
       }
     },

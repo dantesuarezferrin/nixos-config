@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   home.packages = with pkgs; [
 		pavucontrol
@@ -27,8 +27,9 @@
 		poppler-utils
 		zathura
 		xdotool
-
+	
 		octaveFull
+
 		inputs.finanzas.packages.${pkgs.system}.default
 	];
 
@@ -51,5 +52,4 @@
 			};
 		};
 	};
-	
 }
