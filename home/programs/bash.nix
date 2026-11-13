@@ -11,6 +11,7 @@
       update = "sudo nixos-rebuild switch --flake ~/nixos-config#notebook";
       config = "cd ~/nixos-config && nvim";
 			facu = "cd ~/Facultad && nvim";
+			proj = "cd ~/projects && nvim .";
     };
 
     initExtra = ''
