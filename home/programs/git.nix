@@ -9,7 +9,6 @@
       rebase.autoStash = true;
       push.autoSetupRemote = true;
       core.editor = "nvim";
-			credential.helper = "store";
       user = {
           name = "Dante Suarez";
           email = "dante.suarezferrin1@gmail.com";
