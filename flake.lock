@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794609741,
-        "narHash": "sha256-8juXvm12woHfh+rGGHx6pTKILiS55hhY7p4TxaAwxkU=",
+        "lastModified": 1794682111,
+        "narHash": "sha256-n1W+o1nrm5wcNgm2jU15Q0h+w2+2y6yDy50yUrTjatM=",
         "owner": "dantesuarezferrin",
         "repo": "finanzas",
-        "rev": "2956c6ea09f3acc4ef26971c6e1f501253c8e584",
+        "rev": "f61bcad4837e58282bccf66b0b38c395cef369ae",
         "type": "github"
       },
       "original": {

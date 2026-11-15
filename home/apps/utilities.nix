@@ -13,7 +13,7 @@
 		xclip
 		sesh
 		fzf
-
+		man-pages
 
 		nnn
 		simplescreenrecorder
