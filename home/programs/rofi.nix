@@ -26,7 +26,7 @@
         background-color = mkLiteral "@bg0";
         border = mkLiteral "2px";
         border-color = mkLiteral "@accent-color";
-        border-radius = mkLiteral "6px";
+        border-radius = mkLiteral "0px";
         width = mkLiteral "600px";
         location = mkLiteral "center";
         anchor = mkLiteral "center";
