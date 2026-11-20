@@ -2,7 +2,7 @@
 
 {
   
-	#config.default_prog = { 'tmux', 'new-session', '-A', '-s', 'main' }
+	#config.default_prog = { 'tmux', 'new-session', '-A', '-s', 'main' };
   programs.wezterm = {
     enable = true;
     extraConfig = ''

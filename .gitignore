@@ -3,5 +3,6 @@ result
 result-*
 .direnv/
 .envrc
+*.sqlite
 flake.lock.backup
 EOF

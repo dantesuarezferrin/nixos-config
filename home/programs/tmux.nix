@@ -31,16 +31,13 @@
 
       set-option -g renumber-windows on
 
-      # split más cómodo
       bind | split-window -h
       bind - split-window -v
       unbind '"'
       unbind %
 
-      # reload rápido
       bind r source-file ~/.config/tmux/tmux.conf \; display "Config reloaded!"
 
-      # Mejorar la copia al portapapeles con xclip
       set -g set-clipboard on
       bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "xclip -in -selection clipboard"
       bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -in -selection clipboard"
